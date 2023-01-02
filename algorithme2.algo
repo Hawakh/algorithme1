@@ -1,0 +1,23 @@
+ALGORITHM valid-expression
+VAR
+    nb:INTEGER.
+    wrong:BOOLEAN := False;
+BEGIN
+ while(c <>'#')DO
+ read(c);
+ IF ((NOT IsDigitc) or (c<> '+' and c<> '-' and c<> '*' and c<> '/' ) )THEN
+    wrong:= True;
+ END_IF
+ IF (c='(') THEN
+    nb=nb+1;
+ END_IF
+ IF (c=')') THEN
+    nb=nb-1;
+ END_IF
+ END while
+ IF (Wrong:=False and nb:=0) THEN
+    write("this is a valid expression");
+    ELSE
+    write("this is NOT a valid expression");
+ END_IF
+ END

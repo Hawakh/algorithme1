@@ -1,0 +1,40 @@
+ALGORITHM Permutation
+VAR
+    date:INTEGER;
+    jj,aaaa:INTEGER;
+    mm:STRING;
+BEGIN
+   write("give us the date nb");
+   read(nb);
+jj:=nb/10000;
+mm:=(nb-(nb*10000))/100;
+aaaa=nb%100;
+IF (mm>12 && jj>31) THEN
+    write("wrong date,verify the date month and day");
+ELSE_IF (mm=2 and(aaaa%4=0)and (jj>29)) THEN
+    write("the date not correspending with the month );
+ELSE_IF (mm=2 and(aaaa%4<>0)and (jj>28)) THEN
+    write("the date not correspending with the month ) ;   
+ELSE_IF ((mm=4) OR(mm=6)OR (mm=9)OR (mm=11)and jj>30) THEN
+    write("the date not correspending with the month ) ;  
+ELSE
+SWITCH (mm) DO
+    case 1 : month:="january";break;
+    case 2 : month:="Febrary";break;
+    case 3 : month:="March";break;
+    case 4 : month:="April";break;
+    case 5 : month:="Mai";break;
+    case 6 : month:="june";break;
+    case 7 : month:="july";break;
+    case 8 : month:="august";break;
+    case 9 : month:="spetember;break;
+    case 10 : month:="october";break;
+    case 11 : month:="November";break;
+    case 12: month:="December;break;
+    
+END_SWITCH 
+END_IF
+write("jj:"jj);
+write("mm:"month);
+write("aaaa:"aaaa);
+   

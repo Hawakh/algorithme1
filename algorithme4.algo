@@ -1,0 +1,22 @@
+ALGORITHM read-sentence
+VAR
+    sentence:char;
+    count,voy,nb:INTEGER:=0;
+BEGIN
+    while(sentence <>'.')DO
+ read(sentence);
+
+    nb=nb+1;
+
+ IF (c=' ') THEN
+    count=count+1;
+ END_IF
+ IF (sentence = 'a' or sentence= 'e' or sentence= 'i' or sentence= 'u' or sentence= 'o' or sentence= 'y'  ) THEN
+    voy=voy+1;
+
+ END_IF
+ END while
+  write("the number of characteres in this sentence are:",nb);
+  write("the number of word in this sentence are:",count);
+   write("the number of vowels in this sentence are:",voy);
+END
